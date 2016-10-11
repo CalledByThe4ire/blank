@@ -1,14 +1,3 @@
-// Clear the float on any element.
-clearfix()
-	&:after
-		display table
-		clear both
-		content ''
-
-// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
-fix-text-size-adjust()
-	background-image linear-gradient(transparent, transparent)
-
 // Set element size
 size($width, $height = $width)
 	width $width
@@ -16,8 +5,8 @@ size($width, $height = $width)
 
 // Set margin on left & right
 margin-x($margin)
-	margin-left $margin
 	margin-right $margin
+	margin-left $margin
 
 // Set margin on top & bottom
 margin-y($margin)
@@ -26,13 +15,37 @@ margin-y($margin)
 
 // Set pading on left & right
 padding-x($padding)
-	padding-left $padding
 	padding-right $padding
+	padding-left $padding
 
 // Set padding on top & bottom
 padding-y($padding)
 	padding-top $padding
 	padding-bottom $padding
+
+// Set fixed ontainer
+container()
+	margin 0 auto
+	padding-x $offset--mobile
+	min-width $container--min
+	max-width $container--max
+
+	@media $tablet
+		padding-x $offset--tablet
+
+	@media $desktop
+		padding-x $offset--desktop
+
+// Set fluid container
+container-fluid()
+	margin 0 auto
+	width 100%
+
+// Clear default list styles
+list-clear()
+	margin 0
+	padding 0
+	list-style none
 
 // Set one static retina image
 retinaBackground($image, $ext = 'png') {
