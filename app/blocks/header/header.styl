@@ -1,0 +1,31 @@
+.header
+	padding-top $offset--mobile
+	padding-bottom 13.5rem
+	display flex
+	justify-content center
+	align-items center
+	position relative
+	min-height 185px
+
+	@media $tab-desk
+		justify-content flex-start
+		margin-x unquote('-' + $offset--mobile)
+		padding-y 0
+
+	&::after
+		position absolute
+		left 50%
+		bottom 15px
+		display block
+		content ''
+		transform translateX(-50%)
+		spriteImage($stamp__header)
+		spriteWidth($stamp__header)
+		spriteHeight($stamp__header)
+		spritePosition($stamp__header)
+
+		@media $tab-desk
+			right 0
+			left auto
+			bottom 50%
+			transform translateX(0) translateY(50%)
