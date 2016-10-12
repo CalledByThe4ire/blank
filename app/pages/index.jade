@@ -1,6 +1,6 @@
-include /blocks/index/index
+include ../blocks/content/content
 
-extends /blocks/layout-default/layout-default
+extends ../blocks/layout-default/layout-default
 
 block variables
 	- bodyClass = "--index";
@@ -9,4 +9,4 @@ block head
 	- var pageTitle = 'CSSSR blank';
 
 block content
-	+index()
+	+content()
