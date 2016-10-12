@@ -1,0 +1,7 @@
+include ../text-field/text-field
+
+mixin form(data)
+	+b('form').form&attributes(attributes)
+		+e.fiedset--main-info( role='group' )
+			each item in data.mainInfo
+				+text-field(item, "text-field")
