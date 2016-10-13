@@ -4,6 +4,8 @@ import gulpIf from 'gulp-if';
 import rupture from 'rupture';
 import stylint from 'gulp-stylint';
 import stylus from 'gulp-stylus';
+import postStylus from 'poststylus';
+import lost from 'lost';
 import importIfExist from 'stylus-import-if-exist';
 import autoprefixer from 'autoprefixer-stylus';
 import gcmq from 'gulp-group-css-media-queries';
@@ -22,6 +24,9 @@ gulp.task('styles', () => (
 			use: [
 				importIfExist(),
 				rupture(),
+				postStylus([
+					lost
+				]),
 				autoprefixer()
 			],
 			'include css': true

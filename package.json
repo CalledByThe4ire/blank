@@ -98,6 +98,7 @@
     "jade-injected": "^1.0.2",
     "jquery": "^2.1.4",
     "jquery.cycle2": "^2.1.7",
+    "lost": "^7.1.0",
     "lost-stylus": "^0.1.2",
     "merge-stream": "^1.0.0",
     "node-notifier": "^4.3.1",
