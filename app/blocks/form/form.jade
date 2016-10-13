@@ -12,3 +12,12 @@ mixin form(data)
 				| Выпускник <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
 			each item in data.additionalInfo
 				+toggle-field(item, 'toggle-field--radio')
+
+		+e.fieldset--skills(role='group')
+			+e.legend
+				| Практические навыки
+			+e('p').comment
+				| Отметьте только те&nbsp;технологии и&nbsp;типы задач, с&nbsp;которыми вы хорошо знакомы. Отсутсвие опыта отнюдь не&nbsp;означает, что у&nbsp;вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те&nbsp;задачи, с&nbsp;которыми гарантировано будете справляться.
+			+e.container
+				each item in data.skills
+					+toggle-field(item, 'toggle-field--checkbox')
