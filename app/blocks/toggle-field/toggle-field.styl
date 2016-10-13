@@ -1,0 +1,44 @@
+.toggle-field
+	&__input
+		display none
+
+	&--radio
+		^[0]__caption // @stylint ignore
+				position relative
+				margin-right 1rem
+				padding-left 3.5rem
+				display inline
+				font-weight 700
+
+				@media $tab-desk
+					margin-right 1.5rem
+					display flex
+
+				&::before
+					position absolute
+					top 50%
+					left 0
+					display block
+					content ''
+					transform translateY(-50%)
+					spriteWidth($outer_ellipse__radio)
+					spriteHeight($outer_ellipse__radio)
+					spriteImage($outer_ellipse__radio)
+					spritePosition($outer_ellipse__radio)
+
+		^[0]__input // @stylint ignore
+				&:checked +
+					& ^[0]__caption // .toggle-text__caption
+						&::after
+							position absolute // @stylint ignore
+							top 50% // @stylint ignore
+							left 0 // @stylint ignore
+							display block // @stylint ignore
+							width 14px // @stylint ignore
+							height 14px // @stylint ignore
+							content '' // @stylint ignore
+							transform translateX(50%) translateY(-50%) // @stylint ignore
+							spriteWidth($inner_ellipse__radio) // @stylint ignore
+							spriteHeight($inner_ellipse__radio) // @stylint ignore
+							spriteImage($inner_ellipse__radio) // @stylint ignore
+							spritePosition($inner_ellipse__radio) // @stylint ignore
