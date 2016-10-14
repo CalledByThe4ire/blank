@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import gulpIf from 'gulp-if';
-import rupture from 'rupture';
 import stylint from 'gulp-stylint';
 import stylus from 'gulp-stylus';
 import postStylus from 'poststylus';
@@ -23,7 +22,6 @@ gulp.task('styles', () => (
 		.pipe(stylus({
 			use: [
 				importIfExist(),
-				rupture(),
 				postStylus([
 					lost
 				]),
