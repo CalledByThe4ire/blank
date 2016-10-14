@@ -36,12 +36,14 @@
       "inputType": "radio",
       "label": "Да",
       "value": "yes",
+      "name": "graduate",
       "isChecked": true
     },
     {
       "inputType": "radio",
       "label": "Нет",
       "value": "no",
+      "name": "graduate",
       "isChecked": false
     }
   ],

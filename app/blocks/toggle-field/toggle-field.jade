@@ -2,8 +2,5 @@ mixin toggle-field(item, inputType)
 	- var attributes = {'class': inputType};
 
 	+b('label')&attributes(attributes)
-		- if (inputType === 'toggle-field--radio') {
-			- attributes.name = 'graduate';
-		- }
-		+e('input').input(type=item.inputType, checked=item.isChecked)&attributes(attributes)
+		+e('input').input(type=item.inputType, name=item.name, checked=item.isChecked)&attributes(attributes)
 		+e.caption !{item.label}
