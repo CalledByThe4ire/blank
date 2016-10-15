@@ -1,0 +1,8 @@
+mixin slider(data)
+	+b.slider&attributes(attributes)
+		+e('div').caption
+			| Уровень владения JavaScript
+		+e('ul').slides
+			each item in data.jsSkills
+				+e('li').slide('data-skill-level=item.skillLevel')
+					| !{item.text}

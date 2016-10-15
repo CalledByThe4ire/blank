@@ -1,0 +1,97 @@
+.slider
+	margin-bottom 8.5rem
+
+	@media $tab-desk
+		margin-bottom 10.5rem
+
+	&__caption
+		position relative
+		padding-bottom 4rem
+		font-weight 700
+		line-height normal
+		&::after
+			position absolute
+			left 20%
+			bottom 5px
+			display block
+			content ''
+			transform translateX(-50%)
+			sprite($arrow__slider)
+
+	&__slides
+		position relative
+		display flex
+		justify-content space-between
+		list-clear()
+
+		&::before
+		&::after
+			position absolute
+			display flex
+			content ''
+
+		&::before
+			top 0
+			left 0
+			width 100%
+			spriteHeight($line__text_field)
+			spriteImage($line__text_field)
+			spritePosition($line__text_field)
+
+		&::after
+			top 3px
+			right 0
+			width 3px
+			height 25px
+			background-color $color-primary
+
+.slide
+	position absolute
+	top 0
+	padding-top 30px
+
+	&::before
+		position absolute
+		top 3px
+		left 0
+		display flex
+		width 3px
+		height 25px
+		content ''
+		background-color $color-primary
+
+	@media $desktop
+		&:nth-child(2)
+		&:nth-child(3)
+			&::before
+				height 13px
+
+		&:nth-child(1)
+			left 0
+
+		&:nth-child(2)
+			left 20%
+
+		&:nth-child(3)
+			left 50%
+
+		&:nth-child(4)
+			right 0
+			left auto
+
+			&::before
+				height 0
+
+	&__text
+		margin-top 0
+		margin-bottom 0
+		font-size 15px
+		font-weight 700
+		line-height 19px
+
+		&--invisible
+			display none
+
+		@media $desktop
+			font-size 13px
+
