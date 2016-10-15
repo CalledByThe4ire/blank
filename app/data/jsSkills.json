@@ -1,0 +1,18 @@
+[
+  {
+    "text": "<p class='slide__text'>Не владею</p>",
+    "skillLevel": "0"
+  },
+  {
+    "text": "<p class='slide__text'>Использую готовые решения</p>",
+    "skillLevel": "1"
+  },
+  {
+    "text": "<p class='slide__text slide__text--mobile'>Использую готовые решения и умею их переделывать</p><p class='slide__text slide__text--desktop slide__text--invisible'>Использую готовые решения<br>и умею их переделывать</p>",
+    "skillLevel": "2"
+  },
+  {
+    "text": "<p class='slide__text'>Пишу сложные скрипты</p>",
+    "skillLevel": "3"
+  }
+]
