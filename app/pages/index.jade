@@ -1,5 +1,6 @@
 include ../blocks/content/content
 include ../blocks/form/form
+include ../blocks/slider/slider
 
 extends ../blocks/layout-default/layout-default
 
@@ -12,3 +13,4 @@ block head
 block content
 	+content()
 		+form(getData('form'))
+		+slider(getData('jsSkills'))
