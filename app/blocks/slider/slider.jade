@@ -1,9 +1,0 @@
-include ../slide/slide
-
-mixin slider(jsSkills)
-	+b.slider&attributes(attributes)
-		+e('div').caption
-			| Уровень владения JavaScript
-		+e('ul').slides
-			each item in jsSkills
-				+slide(item)

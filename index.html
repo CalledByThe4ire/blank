@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="imagetoolbar" content="no">
+		<meta name="msthemecompatible" content="no">
+		<meta name="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="google" value="notranslate">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link sizes="57x57" href="/apple-touch-icon-57x57.png" rel="apple-touch-icon">
+		<link sizes="114x114" href="/apple-touch-icon-114x114.png" rel="apple-touch-icon">
+		<link sizes="72x72" href="/apple-touch-icon-72x72.png" rel="apple-touch-icon">
+		<link sizes="144x144" href="/apple-touch-icon-144x144.png" rel="apple-touch-icon">
+		<link sizes="60x60" href="/apple-touch-icon-60x60.png" rel="apple-touch-icon">
+		<link sizes="120x120" href="/apple-touch-icon-120x120.png" rel="apple-touch-icon">
+		<link sizes="76x76" href="/apple-touch-icon-76x76.png" rel="apple-touch-icon">
+		<link sizes="152x152" href="/apple-touch-icon-152x152.png" rel="apple-touch-icon">
+		<link sizes="180x180" href="/apple-touch-icon-180x180.png" rel="apple-touch-icon">
+		<link sizes="192x192" href="/favicon-192x192.png" rel="icon" type="image/png">
+		<link sizes="160x160" href="/favicon-160x160.png" rel="icon" type="image/png">
+		<link sizes="96x96" href="/favicon-96x96.png" rel="icon" type="image/png">
+		<link sizes="16x16" href="/favicon-16x16.png" rel="icon" type="image/png">
+		<link sizes="32x32" href="/favicon-32x32.png" rel="icon" type="image/png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="application-name" content="">
+		<meta name="msapplication-tooltip" content="">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/mstile-large.png">
+		<meta name="msapplication-starturl" content="https://csssr.github.io/csssr-project-template/">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="msapplication-square70x70logo" content="/mstile-small.png">
+		<meta name="msapplication-square150x150logo" content="/mstile-medium.png">
+		<meta name="msapplication-wide310x150logo" content="/mstile-wide.png">
+		<meta name="msapplication-square310x310logo" content="/mstile-large.png">
+		<title>CSSSR blank</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="/assets/styles/app.min.css?v=407ea4d" rel="stylesheet">
+	</head>
+
+	<body class="page page--index">
+		<div class="box">
+			<header class="header">
+				<div class="logo">
+					<a href="index.html" class="logo__link">
+						<img src="assets/images/logo__header.png" width="154" height="52" alt="CSSSR" class="logo__image" title="" />
+						<span class="logo__text">Секретный архив учреждения</span>
+					</a>
+				</div>
+			</header>
+			<main class="content" role="main">
+				<form class="form">
+					<div role="group" class="form__fieldset form__fieldset--main-info">
+						<label class="text-field">
+							<span class="text-field__caption">Полное ФИО</span>
+							<div class="text-field__container">
+								<input type="text" pattern="^[A-Za-zА-Яа-яЁё/s]+$" placeholder="Карамнов Андрей Валерьевич" required="required" class="text-field__input"
+								/>
+							</div>
+						</label>
+						<label class="text-field">
+							<span class="text-field__caption">Год рождения</span>
+							<div class="text-field__container">
+								<input type="number" pattern="[0-9]{4}" placeholder="1981" required="required" class="text-field__input" />
+							</div>
+						</label>
+						<label class="text-field">
+							<span class="text-field__caption">Место жительства</span>
+							<div class="text-field__container">
+								<input type="text" pattern="^[A-Za-zА-Яа-яЁё/s]+$" placeholder="г. Москва, Росия" required="required" class="text-field__input"
+								/>
+							</div>
+						</label>
+						<label class="text-field">
+							<span class="text-field__caption">Скайп</span>
+							<div class="text-field__container">
+								<input type="text" pattern="" placeholder="calledbythefire" required="required" class="text-field__input" />
+							</div>
+						</label>
+						<label class="text-field">
+							<span class="text-field__caption">Почта</span>
+							<div class="text-field__container">
+								<input type="email" pattern="" placeholder="karamnoff@gmail.com" required="required" class="text-field__input" />
+							</div>
+						</label>
+					</div>
+					<div role="group" class="form__fieldset form__fieldset--additional-info">
+						<div class="form__legend">Выпускник
+							<a href="https://htmlacademy.ru/">htmlacademy.ru</a>
+						</div>
+						<label class="toggle-field toggle-field--radio">
+							<input type="radio" name="graduate" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--radio"
+							/>
+							<span class="toggle-field__caption">Да</span>
+						</label>
+						<label class="toggle-field toggle-field--radio">
+							<input type="radio" name="graduate" class="toggle-field__input toggle-field toggle-field toggle-field--radio" />
+							<span class="toggle-field__caption">Нет</span>
+						</label>
+					</div>
+					<div role="group" class="form__fieldset form__fieldset--skills">
+						<div class="form__legend">Практические навыки</div>
+						<p class="form__comment">Отметьте только те&nbsp;технологии и&nbsp;типы задач, с&nbsp;которыми вы хорошо знакомы. Отсутсвие опыта отнюдь не&nbsp;означает,
+							что у&nbsp;вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те&nbsp;задачи, с&nbsp;которыми
+							гарантировано будете справляться.</p>
+						<div class="form__container">
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">Методология&nbsp;БЭМ</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">Jade</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox" />
+								<span class="toggle-field__caption">Верстка рассылок</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">jQuery</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">Stylus</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">Адаптивная верстка</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">Использую GULP</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox" />
+								<span class="toggle-field__caption">Знаю&nbsp;(изучаю)&nbsp;Angular</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">Использую Dropbox</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox" />
+								<span class="toggle-field__caption">HAML</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox" />
+								<span class="toggle-field__caption">Верстка&nbsp;под&nbsp;Android</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">Использую Gmail</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">SASS</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox" />
+								<span class="toggle-field__caption">Верстка&nbsp;под&nbsp;iOS</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" checked="checked" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox"
+								/>
+								<span class="toggle-field__caption">Использую GitHub</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox" />
+								<span class="toggle-field__caption">LESS</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox" />
+								<span class="toggle-field__caption">Верстка
+									<br>под&nbsp;Windows&nbsp;Phone</span>
+							</label>
+							<label class="toggle-field toggle-field--checkbox">
+								<input type="checkbox" class="toggle-field__input toggle-field toggle-field toggle-field--checkbox" />
+								<span class="toggle-field__caption">CoffeeScript</span>
+							</label>
+						</div>
+					</div>
+				</form>
+				<div class="slider">
+					<div class="slider__caption">Уровень владения JavaScript</div>
+					<ul class="slider__slides">
+						<li data-skill-level="0" class="slide">
+							<p class='slide__text'>Не владею</p>
+						</li>
+						<li data-skill-level="1" class="slide">
+							<p class='slide__text'>Использую готовые решения</p>
+						</li>
+						<li data-skill-level="2" class="slide">
+							<p class='slide__text slide__text--mobile'>Использую готовые решения и умею их переделывать</p>
+							<p class='slide__text slide__text--desktop slide__text--invisible'>Использую готовые решения
+								<br>и умею их переделывать</p>
+						</li>
+						<li data-skill-level="3" class="slide">
+							<p class='slide__text'>Пишу сложные скрипты</p>
+						</li>
+					</ul>
+				</div>
+			</main>
+			<footer class="footer">
+				<label class="text-field">
+					<span class="text-field__caption">Дата заполнения</span>
+					<div class="text-field__container">
+						<input type="date" required="required" class="text-field__input" />
+					</div>
+				</label>
+			</footer>
+		</div>
+		<script src="/assets/scripts/app.min.js?v=906ed57"></script>
+	</body>
+
+</html>
