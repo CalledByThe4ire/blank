@@ -3,7 +3,8 @@
 import $ from 'jquery';
 import utils from '../../scripts/utils';
 
-export default window.addEventListener('DOMContentLoaded', function () {
+export default window.addEventListener('DOMContentLoaded', () => {
+
 
 	const mql = window.matchMedia('only screen and (max-width: 1019px)');
 
@@ -28,19 +29,17 @@ export default window.addEventListener('DOMContentLoaded', function () {
 	};
 
 	/**
-	* Задает смещение относительно x-координаты
-	* @param {Number} x
-	*/
-	const setXCoord = function (x) {
-		sliderCaption.pseudoStyle('after', 'left', x + '%');
-	};
+	 * Задает смещение относительно x-координаты
+	 * @param {Number} x
+	 */
+	const setXCoord = x => sliderCaption.pseudoStyle('after', 'left', x + '%');
 
 	/**
-	* В зависимости от переданного параметра
-	* запускает функцию setXCoord c указанным значением
-	* @param {String} data
-	*/
-	const setMarkerPos = function (data) {
+	 * В зависимости от переданного параметра
+	 * запускает функцию setXCoord c указанным значением
+	 * @param {String} data
+	 */
+	const setMarkerPos = data => {
 		switch (data) {
 			case '0':
 				setXCoord(0);
@@ -61,11 +60,11 @@ export default window.addEventListener('DOMContentLoaded', function () {
 	};
 
 	/**
-	* Сохраняет значение data-атрибута целевого элемента в переменную,
-	* которая, в зависимости от условия, передается функции в качестве параметра
-	* @param evt
-	*/
-	const setMarker = function (evt) {
+	 * Сохраняет значение data-атрибута целевого элемента в переменную,
+	 * которая, в зависимости от условия, передается функции в качестве параметра
+	 * @param evt
+	 */
+	const setMarker = evt => {
 		clickedElemData = evt.target.parentElement.dataset.skillLevel;
 		if (mql.matches) {
 			setXCoord(0);
@@ -74,7 +73,7 @@ export default window.addEventListener('DOMContentLoaded', function () {
 		}
 	};
 
-	Array.prototype.forEach.call(slidesList, function (elem) {
+	Array.prototype.forEach.call(slidesList, elem => {
 		elem.addEventListener('click', setMarker);
 	});
 
@@ -85,16 +84,16 @@ export default window.addEventListener('DOMContentLoaded', function () {
 		$(slider).cycle(cycle2Obj);
 
 	}else {
-		Array.prototype.forEach.call(slideSwappingContent, function (elem) {
+		Array.prototype.forEach.call(slideSwappingContent, elem => {
 			elem.classList.toggle('slide__text--invisible');
 		});
 
 		setMarkerPos(clickedElemData);
 	}
 
-	window.addEventListener('resize', utils.throttle(function () {
+	window.addEventListener('resize', utils.throttle( () => {
 		if (mql.matches) {
-			Array.prototype.forEach.call(slideSwappingContent, function (elem) {
+			Array.prototype.forEach.call(slideSwappingContent, elem => {
 				elem.classList.toggle('slide__text--invisible', !elem.classList.contains('slide__text--mobile'));
 			});
 
@@ -107,7 +106,7 @@ export default window.addEventListener('DOMContentLoaded', function () {
 			}
 
 		}else {
-			Array.prototype.forEach.call(slideSwappingContent, function (elem) {
+			Array.prototype.forEach.call(slideSwappingContent, elem => {
 				elem.classList.toggle('slide__text--invisible', !elem.classList.contains('slide__text--desktop'));
 			});
 
@@ -120,5 +119,4 @@ export default window.addEventListener('DOMContentLoaded', function () {
 			}
 		}
 	}, THROTTLE_TIMEOUT));
-
 });
