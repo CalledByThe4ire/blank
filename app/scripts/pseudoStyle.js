@@ -8,7 +8,7 @@ const UID = {
 	}
 };
 
-HTMLElement.prototype.pseudoStyle = function (element, prop, value) {
+export default HTMLElement.prototype.pseudoStyle = function (element, prop, value) {
 	const self = this;
 	const sheetId = 'pseudoStyles';
 	const head = document.head || document.getElementsByTagName('head')[0];
@@ -22,5 +22,3 @@ HTMLElement.prototype.pseudoStyle = function (element, prop, value) {
 	head.appendChild(sheet);
 	return this;
 };
-
-export default UID;
