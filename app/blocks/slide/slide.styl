@@ -43,9 +43,21 @@
 		font-weight 700
 		line-height 19px
 
+		&--mobile
+			display block
+
+		&--desktop
+			display none
+
 		&--invisible
 			display none
 
 		@media $desktop
 			font-size 13px
+
+			&--mobile
+				display none
+
+			&--desktop
+				display block
 
