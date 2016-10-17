@@ -2,14 +2,10 @@
 
 import $ from 'jquery';
 import 'jquery.cycle2';
-import utils from '../../scripts/utils';
 
 export default window.addEventListener('DOMContentLoaded', () => {
 
-
 	const mql = window.matchMedia('only screen and (max-width: 1019px)');
-
-	const THROTTLE_TIMEOUT = 100;
 
 	// переменная для записи значения data-атрибута
 	// выбранного в данный момент слайда
@@ -92,7 +88,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		setMarkerPos(clickedElemData);
 	}
 
-	window.addEventListener('resize', utils.throttle( () => {
+	window.addEventListener('resize', () => {
 		if (mql.matches) {
 			Array.prototype.forEach.call(slideSwappingContent, elem => {
 				elem.classList.toggle('slide__text--invisible', !elem.classList.contains('slide__text--mobile'));
@@ -102,7 +98,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 			// инициализирует слайдер Cycle2 только в случае,
 			// если он не был создан ранее
-			if (!($(slider).data('cycle.opts'))) {
+			if ( !$(slider).data('cycle.opts') ) {
 				$(slider).cycle(cycle2Obj);
 			}
 
@@ -113,11 +109,11 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 			setMarkerPos(clickedElemData);
 
-			if (($(slider).data('cycle.opts'))) {
+			if ( $(slider).data('cycle.opts') ) {
 				// удаляет слайдер Cycle2 только в случае,
 				// если он был создан ранее
 				$(slider).cycle('destroy');
 			}
 		}
-	}, THROTTLE_TIMEOUT));
+	});
 });
