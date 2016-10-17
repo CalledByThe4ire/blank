@@ -26,16 +26,16 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	/**
-	 * Задает смещение относительно x-координаты
-	 * @param {Number} x
-	 */
+	* Задает смещение относительно x-координаты
+	* @param {Number} x
+	*/
 	const setXCoord = x => sliderCaption.pseudoStyle('after', 'left', x + '%');
 
 	/**
-	 * В зависимости от переданного параметра
-	 * запускает функцию setXCoord c указанным значением
-	 * @param {String} data
-	 */
+	* В зависимости от переданного параметра
+	* запускает функцию setXCoord c указанным значением
+	* @param {String} data
+	*/
 	const setMarkerPos = data => {
 		switch (data) {
 			case '0':
@@ -57,10 +57,10 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	/**
-	 * Сохраняет значение data-атрибута целевого элемента в переменную,
-	 * которая, в зависимости от условия, передается функции в качестве параметра
-	 * @param evt
-	 */
+	* Сохраняет значение data-атрибута целевого элемента в переменную,
+	* которая, в зависимости от условия, передается функции в качестве параметра
+	* @param evt
+	*/
 	const setMarker = evt => {
 		clickedElemData = evt.target.parentElement.dataset.skillLevel;
 		if (mql.matches) {
