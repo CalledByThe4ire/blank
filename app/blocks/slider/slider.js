@@ -1,6 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
+import 'jquery.cycle2';
 import utils from '../../scripts/utils';
 
 export default window.addEventListener('DOMContentLoaded', () => {
