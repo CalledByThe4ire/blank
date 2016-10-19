@@ -9,7 +9,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 	// переменная для записи значения data-атрибута
 	// выбранного в данный момент слайда
-	let clickedElemData = '0';
+	let clickedElemData = '20';
 
 	const slider = document.querySelector('.slider__slides');
 	const sliderCaption = document.querySelector('.slider__caption');
@@ -85,6 +85,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 			elem.classList.toggle('slide__text--invisible');
 		});
 
+		setXCoord(20);
 		setMarkerPos(clickedElemData);
 	}
 
@@ -107,6 +108,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 				elem.classList.toggle('slide__text--invisible', !elem.classList.contains('slide__text--desktop'));
 			});
 
+			setXCoord(20);
 			setMarkerPos(clickedElemData);
 
 			if ( $(slider).data('cycle.opts') ) {
