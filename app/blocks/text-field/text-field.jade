@@ -1,5 +1,6 @@
 mixin text-field(item, inputType)
 	- var attributes = {'class': inputType};
+
 	+b('label')&attributes(attributes)
 		+e.caption !{item.label}
 		+e('div').container
